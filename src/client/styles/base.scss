@@ -1,0 +1,191 @@
+// FONT
+$main-font: 1rem "Lato", sans-serif;
+
+// RESPONSIVE BREAKPOINTS
+// $bp-largest: 75.0625rem; // 1201px
+// $bp-large: 64.0625rem; // 1025px
+$bp-medium: 54.6rem; // 858px
+$bp-small: 36rem; // 481px
+
+// COLOR
+$icon-color:#1ABC9C;
+$bt-color: #20948b;
+$bt-hover-color: #07575b;
+$white: white;
+$green-dark: #00a99d;
+$green-shadow: rgba(0, 169, 157, 0.56);
+$green-btn: rgba(0, 128, 128, 0.733);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  /* REM for size, margin, padding */
+  font-size: 62.5%; /* = 10px = 1rem */
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 52.5%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 46.5%;
+  }
+}
+
+body {
+  font: $main-font;
+}
+
+img {
+  // Responsive
+  width: 100%;
+  object-fit:center;
+}
+
+ul {
+  list-style: none;
+}
+
+.big-font{
+  font-size: 2rem;
+}
+
+.link {
+  color: $white;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+.btn {
+  font-size: 1.5rem;
+  padding: 0 2rem;
+  height: 4rem;
+  background: $green-shadow;
+  border: 2px solid $white;
+  color: $white;
+  // transition: 0.5s;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 5px $white;
+    cursor: pointer;
+    background: $green-btn;
+  }
+
+  &:active {
+    background: $white;
+    color: $green-btn;
+    border: 2px solid $green-dark;
+  }
+}
+
+input {
+  font-size: 1.5rem;
+  color: $white;
+  
+  &[type="text"] {
+    background: $green-shadow;
+    border: 2px solid $white;
+    padding: 0 2rem;
+    height: 4rem;
+  }
+
+  &[type="date"] {
+    background: transparent;
+    max-width: 100%;
+    height: 100%;
+    border: none;
+
+    &::-webkit-calendar-picker-indicator {
+      // filter: invert(1); //white icon
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      height: auto;
+      cursor: pointer;
+      color: transparent;
+      position: absolute;
+      background: transparent;
+    }
+
+    &:before {
+			content: attr(placeholder);
+			color: $white;
+			margin: 0 1rem;
+		}
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 5px $white;
+    outline: none;
+  }
+
+  /* Change autocomplete styles in WebKit */
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    // border: 1px solid white;
+    -webkit-text-fill-color: $white;
+    // -webkit-box-shadow: 0 0 0px 1000px red inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+
+// scrollbar horizontal & vertical
+::-webkit-input-placeholder {
+  /* Edge */
+  color: $white;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $white;
+}
+
+::placeholder {
+  color: $white;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  height: 1rem;
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px silver; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: silver; 
+  border-radius: 5px;
+  /* transition: 0.5s; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $green-btn 
+}

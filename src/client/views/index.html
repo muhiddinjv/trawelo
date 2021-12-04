@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trawelo</title>
+    <link rel="stylesheet" href="/styles/resets.css" />
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <section class="hnav">
+          <div class="hnav__left">Trawelo</div>
+          <div class="hnav__right">Navigation</div>
+        </section>
+
+        <section class="imposter">
+          <div class="imposter__title">
+            <h1 class="imposter__heading">Trawelo</h1>
+            <h5 class="imposter__sub-heading">
+              Where the travel of your life begins!
+            </h5>
+            <div class="form__error"></div>
+          </div>
+
+          <form class="form" onsubmit="handleSubmit(event)">
+            <!-- <div class="form__offline">offline handler</div> -->
+            <div class="form__inputs">
+              <select class="form__inputs-select">
+                <option value="travels">Travels</option>
+                <option value="hotels">Hotels</option>
+                <option value="flights">Flights</option>
+              </select>
+
+              <div class="form__inputs-city">
+                <input
+                  id="city"
+                  type="text"
+                  name="input"
+                  value="new york"
+                  placeholder="Enter city (e.g. Tashkent)"
+                  required
+                />
+              </div>
+
+              <div class="form__inputs-dates">
+                <div class="date-start">
+                  <input
+                    id="start"
+                    type="date"
+                    name="date"
+                    placeholder="Start"
+                    required
+                  />
+                </div>
+                <div class="date-end">
+                  <input
+                    id="end"
+                    type="date"
+                    name="date"
+                    placeholder="End"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form__inputs-btn">
+                <button
+                  id="submit"
+                  class="btn form__btn"
+                  name="submit"
+                  value="Add Travel"
+                >
+                  Add Travel
+                </button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </header>
+
+      <main>
+        <section id="travels" class="travels">
+          <div class="travels__message">
+            <div class="travels__update"></div>
+            <div class="travels__status"></div>
+          </div>
+          <ul class="travels__results" id="results"></ul>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <p>
+          &copy
+          <a class="link" href="https://github.com/Emuallim/" target="_blank">Emuallim</a> 2022
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // Check that service workers are supported
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((reg) => {
+              console.log("ServiceWorker registration SUCCESSFUL", reg);
+            })
+            .catch((err) => {
+              console.log("ServiceWorker registration FAILED", err);
+            });
+        });
+      }
+    </script>
+    <script src="new.js"></script>
+  </body>
+</html>

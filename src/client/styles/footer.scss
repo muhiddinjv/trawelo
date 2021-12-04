@@ -1,0 +1,14 @@
+@import 'base';
+
+footer {
+    // background: #333;
+    font-size: 1.6rem;
+    text-align: center;
+    color: $white;
+    margin-top: 4rem;
+    padding: 1rem;
+    background: $green-dark;
+    .link:hover{
+        text-decoration: underline;
+    }
+}

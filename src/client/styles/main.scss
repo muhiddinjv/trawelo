@@ -1,0 +1,134 @@
+@import "base";
+
+main{
+    // background: linear-gradient(to bottom, #b0f3dd 0%, #ffffff 100%);
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+
+    .travels{
+        font-size: 1.6rem;
+
+        &__results{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &__list{
+            width: 36rem;
+            margin: 4rem 2rem 0 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            &:hover{
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+        }
+
+        &__image{
+            border-radius: 1rem 1rem 0 0;
+            height: 25rem;
+        }
+
+        &__content{
+            margin: 1.5rem;
+        }
+
+        &__title{
+            font-size: 2rem;
+        }
+
+        &__dates{
+            margin: 0.5rem 0;
+        }
+
+        &__weather{
+            overflow: auto;
+            white-space: nowrap;
+
+            &-card{
+                margin: 2rem 4rem 1rem 0.4rem;
+                width: 32rem;
+                display: inline-block;
+               
+                &:last-child{
+                    margin-right: 0.4rem;
+                }
+            }
+            &-content{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+                margin: 1rem 0;
+            }
+
+            &-icon{
+                border: 1px solid #999;
+                border-radius: 50%;
+                width: 10rem;
+            }
+
+            &-sun, &-temp{
+                border-radius: 1rem;
+                margin: 0.6rem 0;
+                border: 1px solid #999;
+                
+                legend{
+                    padding: 0 0.5rem;
+                }
+            }
+            
+            &-sunmeta, &-tempmeta{
+                padding: 0.5rem 1rem 1rem 1rem;
+                margin: 0.1rem;
+                text-align: left;
+            }
+            
+
+            &-chance{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                .rain{
+                    color: MediumSeaGreen;
+                    font-size: 4rem;
+                }
+                
+                .snow{
+                    color: DodgerBlue;
+                    font-size: 4rem;
+                }
+            }
+        }
+
+        &__edit{
+            display: flex;
+            align-items: center;
+            background: $icon-color;
+            justify-content:space-between;
+            border-radius: 0 0 1rem 1rem;
+        }
+
+        &__edit > *{
+            width: 100%;
+            border: none;
+            border-left: 0.1rem solid white;
+            &:hover{
+                border: none;
+            }
+        }
+
+        &__todo{
+            border-bottom-left-radius: 1rem;
+            border: none;
+        } 
+        
+        &__delete{
+            border-bottom-right-radius: 1rem;
+            font-size:2rem;
+            font-weight:bold;
+        }
+    }
+}
