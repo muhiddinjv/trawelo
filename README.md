@@ -120,4 +120,4 @@ Testing is done with Jest. To run test, use the command `npm test`. To see a ful
 
 - [ ] 13) Check past years: get weather on the current day for the past 3 years
 
-- [ ] 14) Host the dynamic web app on heroku.
+- [ ] 14) Host the dynamic web app on heroku
