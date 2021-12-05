@@ -9,6 +9,8 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static('dist'));
 
+console.log(process.env.DB);
+
 // Create travel data from 3 apis
 app.post('/apis', async (req, res) => {
 	try {
