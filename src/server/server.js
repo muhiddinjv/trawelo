@@ -9,13 +9,6 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static('dist'));
 
-// Server Test and Troubleshooting
-const mockAPIResponse = require('./mockAPI.js');
-
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
-});
-
 // Create travel data from 3 apis
 app.post('/apis', async (req, res) => {
 	try {
@@ -26,6 +19,14 @@ app.post('/apis', async (req, res) => {
 	} catch (err) {
 		console.error(err);
 	}
+});
+
+const port = process.env.PORT || 1010;
+
+// designates what port the app will listen to for incoming requests
+app.listen(port, (error) => {
+  if (error) throw new Error(error);
+  console.log(`Travel app listening on port ${port}!`);
 });
 
 module.exports = app;
