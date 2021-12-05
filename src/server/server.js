@@ -28,10 +28,12 @@ app.post('/apis', async (req, res) => {
 	}
 });
 
+const port = process.env.PORT || 1010;
+
 // designates what port the app will listen to for incoming requests
-app.listen(1010, function (error) {
+app.listen(port, (error) => {
   if (error) throw new Error(error);
-  console.log("Example app listening on port 1010!");
+  console.log(`Travel app listening on port ${port}!`);
 });
 
 module.exports = app;

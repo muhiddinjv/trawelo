@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node src/server/server.js",
+    "start": "nodemon src/server/server.js",
     "prod": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server  --config webpack.dev.js --open --port 3030",
     "deploy": "gh-pages -d dist"
