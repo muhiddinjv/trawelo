@@ -28,7 +28,7 @@ const PORT = process.env.PORT || 1010;
 // designates what port the app will listen to for incoming requests
 app.listen(PORT, (error) => {
   if (error) throw new Error(error);
-  console.log(`Travel app listening on port ${port}!`);
+  console.log(`Travel app listening on port ${PORT}!`);
 });
 
 module.exports = app;
