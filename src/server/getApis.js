@@ -1,6 +1,9 @@
 require("dotenv").config();
-const { default: axios } = require("axios");
-const { GEO_URL, GEO_USER, WB_URL, WB_KEY, PIX_URL, PIX_KEY } = process.env;
+const axios = require('axios');
+const GEO_URL = 'http://api.geonames.org/searchJSON?q';
+const WB_URL = 'https://api.weatherbit.io/v2.0/forecast/daily?';
+const PIX_URL = 'https://pixabay.com/api/?';
+const { GEO_USER, WB_KEY, PIX_KEY } = process.env;
 
 const getApis = async (cityName) => {
   try {
