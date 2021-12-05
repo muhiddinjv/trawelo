@@ -32,7 +32,7 @@ const handleSubmit = async (e) => {
     // console.log(">>> Running formHandler below >>>");
 
     // Make a Post request
-    const api = await axios.post("http://localhost:1010/apis", { cityInput });
+    const api = await axios.post("http://localhost:80/apis", { cityInput });
 
     if (api.status == "404") {
       inputError.textContent =
