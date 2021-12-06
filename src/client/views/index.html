@@ -96,19 +96,18 @@
       <footer id="footer">
         <p>
           &copy
-          <a class="link" href="https://github.com/Emuallim/" target="_blank">Emuallim</a> 2022
+          <a class="link" href="https://github.com/Emuallim/" target="_blank">Muhiddin JV</a> 2022
         </p>
       </footer>
     </div>
 
     <script>
-      // Check that service workers are supported
       if ("serviceWorker" in navigator) {
         // Use the window load event to keep the page load performant
         window.addEventListener("load", () => {
           navigator.serviceWorker
             .register("/service-worker.js")
-            .then((reg) => {
+            .then((reg) => { // Check that service workers are supported
               console.log("ServiceWorker registration SUCCESSFUL", reg);
             })
             .catch((err) => {

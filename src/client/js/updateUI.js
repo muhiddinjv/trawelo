@@ -63,10 +63,10 @@ const getWeather = (w) => {
         <fieldset class="travels__weather-temp">
           <legend>Temp</legend>
           <div class="travels__weather-tempmeta">
-            <div class="high">
+            <div class="high" title="High">
               &#128200; <span class="big-font">${Math.round(w.high_temp)}°C</span>
             </div>
-            <div class="low">
+            <div class="low" title="Low">
               &#128201; <span class="big-font">${Math.round(w.low_temp)}°C</span>
             </div>
           </div>
@@ -77,10 +77,10 @@ const getWeather = (w) => {
         <fieldset class="travels__weather-sun">
           <legend>Sun</legend>
           <div class="travels__weather-sunmeta">
-            <div class="rise">
+            <div class="rise" title="Rise">
               &#128316; <span class="big-font">${unixToLocalTime(w.sunrise_ts)}</span>
             </div>
-            <div class="set">
+            <div class="set" title="Set">
               &#128317; <span class="big-font">${unixToLocalTime(w.sunset_ts)}</span>
             </div>
           </div>
@@ -90,7 +90,7 @@ const getWeather = (w) => {
       <p class="travels__weather-desc">${w.weather.description}</p>
 
       <div class="travels__weather-chance">
-        <span>Chance of</span> 
+        <span title="rain and snow">Chance of</span> 
         <span class="rain" title="Rain">&#127783;</span> 
         <span class="big-font">${Math.round(w.pop)}%</span> 
         <span class="snow" title="Snow">&#127784;</span> 
