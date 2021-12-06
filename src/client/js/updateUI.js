@@ -91,9 +91,9 @@ const getWeather = (w) => {
 
       <div class="travels__weather-chance">
         <span>Chance of</span> 
-        <span class="rain">&#127783;</span> 
+        <span class="rain" title="Rain">&#127783;</span> 
         <span class="big-font">${Math.round(w.pop)}%</span> 
-        <span class="snow">&#127784;</span> 
+        <span class="snow" title="Snow">&#127784;</span> 
         <span class="big-font">${Math.round(w.snow)}%</span> 
       </div>
     </li>
