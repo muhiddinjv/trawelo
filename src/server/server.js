@@ -23,7 +23,7 @@ app.post('/apis', async (req, res) => {
 	}
 });
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 1010;
 
 // designates what port the app will listen to for incoming requests
 app.listen(PORT, (error) => {
