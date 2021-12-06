@@ -1,4 +1,4 @@
-# FEND Capstone Travel App
+# FEND Capstone - Travel App
 
 ## Project Description
 This travel app, at a minimum, obtains a desired trip location & date from the user, and displays weather and an image of the location using information obtained from external APIs.
@@ -14,6 +14,12 @@ The project includes a simple form where you can enter the location you are trav
 6) it has separate development and production configurations for Webpack
 7) it has the developer environment set up with the Webpack dev server
 8) it minifies javascript and style files in the production environment
+
+## Project Demo
+
+<img src="trawelo.gif" alt="Travel planner app" width="700px">
+
+#### check out the web app here: https://trawelo.herokuapp.com/
  
 
 ## Technologies and Languages Used
