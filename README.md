@@ -42,10 +42,8 @@ The project includes a simple form where you can enter the location you are trav
 | Command | Action |
 | :------------: | :-----------: |
 | 1) `npm install` | install dependencies |
-| 2) `npm i -D postcss` | install postcss |
-| 3) `npm run prod` | Build project |
-| 4) `npm start` | Run project |
-| 5) `npm run dev` | Run DevServer |
+| 2) `npm run prod` | Build project |
+| 3) `npm start` | Run project |
 
 
 ## Configs Files
